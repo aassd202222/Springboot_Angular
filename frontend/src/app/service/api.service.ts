@@ -15,7 +15,8 @@ export class ApiService {
   /** 從後端取得資料 */
   getHello() {
     // get回傳Observable<HelloData>物件
-    return this.http.get<HelloData>('/hello'); // 呼叫Spring Boot的DemoController.getHello()
+    let url = 'http://localhost:8080';
+    return this.http.get<HelloData>(url + '/hello'); // 呼叫Spring Boot的DemoController.getHello()
   }
 
 }
