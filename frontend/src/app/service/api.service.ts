@@ -21,7 +21,7 @@ export class ApiService {
     account:string
   ) {
     // get回傳Observable<HelloData>物件
-    return this.http.get<HelloData>(url + '/hello'); // 呼叫Spring Boot的DemoController.getHello()
+    return this.http.get<HelloData>(url + '/hello/' +account); // 呼叫Spring Boot的DemoController.getHello()
   }
 
 }

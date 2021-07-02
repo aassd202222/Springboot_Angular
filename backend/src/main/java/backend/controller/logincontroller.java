@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.*;
 public class logincontroller {
 
     @ResponseBody
-    @GetMapping(value = "/hello")
-    public Member getHello() {
-
+    @GetMapping(value = "/hello/{account}")
+    public Member getHello(@PathVariable String account) {
+        System.out.println(account);
         Member m = new Member();
         m.setId("1");
         m.setName("jason");
