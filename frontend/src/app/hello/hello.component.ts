@@ -11,6 +11,7 @@ export class HelloComponent implements OnInit {
 
   id: string ='';
   name: string ='';
+  account:string = '';
 
   // 注入ApiService
   constructor(
@@ -22,7 +23,7 @@ export class HelloComponent implements OnInit {
 
   /** 委託ApiService.getHello()取得內容 */
   getHello() {
-    this.apiService.getHello().subscribe(
+    this.apiService.getHello(this.account).subscribe(
       value => this.success(value)
     );
   }
@@ -31,6 +32,7 @@ export class HelloComponent implements OnInit {
   success(value: HelloData) {
     this.id = value.id;
     this.name = value.name;
+    this.account = value.account
   }
 
   /** 清除頁面{{hello}}內容 */

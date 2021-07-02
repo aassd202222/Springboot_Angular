@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http' // 引入HttpClientModul
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HelloComponent } from './hello/hello.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule // 引入HttpClientModule，放在BrowserModule後面
+    HttpClientModule, // 引入HttpClientModule，放在BrowserModule後面
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

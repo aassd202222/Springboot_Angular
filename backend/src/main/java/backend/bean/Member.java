@@ -1,5 +1,6 @@
 package backend.bean;
 
+
 public class Member {
 
     private String id ;
