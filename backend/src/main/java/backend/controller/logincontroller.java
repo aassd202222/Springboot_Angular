@@ -14,7 +14,21 @@ public class logincontroller {
         Member m = new Member();
         m.setId("1");
         m.setName("jason");
+        m.setAccount(account);
 
         return m; // <--這邊的字串最後會顯示在前端頁面
     }
+
+    @ResponseBody
+    @PostMapping (value = "/hello")
+    public Member getpost(@RequestBody Member test) {
+        System.out.println("123");
+        System.out.println(test);
+        Member m = new Member();
+        m.setId("1");
+        m.setName("jason");
+
+        return m; // <--這邊的字串最後會顯示在前端頁面
+    }
+
 }

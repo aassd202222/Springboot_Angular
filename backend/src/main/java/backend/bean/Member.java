@@ -4,7 +4,8 @@ package backend.bean;
 public class Member {
 
     private String id ;
-    private  String name;
+    private String name;
+    private String account;
 
     public String getId() {
         return id;
@@ -22,11 +23,20 @@ public class Member {
         this.name = name;
     }
 
+    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
     @Override
     public String toString() {
-        return "member{" +
+        return "Member{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
+                ", account='" + account + '\'' +
                 '}';
     }
 }

@@ -12,6 +12,9 @@ export class HelloComponent implements OnInit {
   id: string ='';
   name: string ='';
   account:string = '';
+  account2:string = '';
+  post:string = '';
+  pasword:string='';
 
   // 注入ApiService
   constructor(
@@ -28,11 +31,25 @@ export class HelloComponent implements OnInit {
     );
   }
 
+
+  getpost(){
+    this.apiService.getpost(
+      this.id,
+      this.name,
+      this.account
+      ).subscribe(
+      a =>console.log(a)
+    );
+  }
+
+
+
   /** API呼叫成功的處理 */
   success(value: HelloData) {
     this.id = value.id;
     this.name = value.name;
     this.account = value.account
+    this.account2 = value.account
   }
 
   /** 清除頁面{{hello}}內容 */

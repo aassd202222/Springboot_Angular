@@ -4,5 +4,4 @@ export class HelloData {
   name:string='';
   account:string='';
   password:string='';
-
 };
